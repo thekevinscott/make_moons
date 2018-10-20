@@ -1,11 +1,14 @@
 {
   "name": "make_moons",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A quick function to generate moons data, similar to sklearn's make_moons, for a presentation on Tensorflow.js and machine learning in Javascript at LibertyJS.",
   "main": "index.js",
   "scripts": {
-    "build": ""
+    "build": "rollup -c"
   },
   "author": "Kevin Scott",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^0.66.6"
+  }
 }
