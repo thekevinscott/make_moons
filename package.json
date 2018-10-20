@@ -1,11 +1,11 @@
 {
   "name": "make_moons",
   "version": "0.0.1",
-  "description": "",
+  "description": "A quick function to generate moons data, similar to sklearn's make_moons, for a presentation on Tensorflow.js and machine learning in Javascript at LibertyJS.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": ""
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Kevin Scott",
+  "license": "MIT"
 }
