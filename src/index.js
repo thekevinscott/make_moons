@@ -38,7 +38,7 @@ const getData = ({
   type,
   noise = 1,
   n_samples = 200,
-  ranges = {},
+  ranges,
 }) => {
   const dots = [];
   if (!type) {
@@ -46,7 +46,7 @@ const getData = ({
   }
 
   for (let i = 0; i < n_samples; i++) {
-    dots.push(getDotType[type](noise, ranges[type]));
+    dots.push(getDotType[type](noise, (ranges || {})[type]));
   }
   return dots;
 };
