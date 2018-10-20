@@ -8,15 +8,27 @@ A quick function to generate moons data, similar to [sklearn's `make_moons`](htt
 > make_moons({ noise: 0.1, n_samples: 1 });
 
 [
-  // a "red" point
+  // a "positive" point
   {
-    x: 0,
-    y: 0,
+    x: 0.5,
+    y: 0.5,
   },
-  // a "blue" point
+  // a "negative" point
   {
-    x: 1,
-    y: 0,
+    x: 0.5,
+    y: -0.5,
+  },
+]
+
+> make_moons({ noise: 0.1, n_samples: 1, type: 'pos' });
+
+[
+  // a single "positive" point
+  {
+    x: 0.5,
+    y: 0.5,
   },
 ]
 ```
+
+Types can be `pos` or `neg`.

@@ -40,15 +40,16 @@ const getData = ({
   n_samples = 200,
 }) => {
   const dots = [];
+  if (!type) {
+    type = Math.random() > 0.5 ? 'pos' : 'neg';
+  }
+
   for (let i = 0; i < n_samples; i++) {
     dots.push(getDotType[type](noise));
   }
   return dots;
 };
 
-const make_moons = (props) => ([
-  getData({ type: 'pos', ...props }),
-  getData({ type: 'neg', ...props }),
-]);
+const make_moons = (props) => getData({ ...props });
 
 export default make_moons;
