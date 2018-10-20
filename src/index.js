@@ -9,7 +9,6 @@ const getDot = ({
   noise,
   range,
 }) => {
-  console.log('the range', range);
   const x = getRandomX(range[0], range[1]);
   return {
     x: x + getRandom(noise),
@@ -41,7 +40,6 @@ const getData = ({
   n_samples = 200,
   ranges,
 }) => {
-  console.log('incoming range', ranges);
   const dots = [];
   if (!type) {
     type = Math.random() > 0.5 ? 'pos' : 'neg';
