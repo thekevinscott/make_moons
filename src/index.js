@@ -22,7 +22,7 @@ const fns = {
 }
 
 const getDotType = {
-  pos: (noise, range = [0, 1 / 3 * 2]) => getDot({
+  pos: (noise, range = [0, 2 / 3]) => getDot({
     fn: fns.pos,
     noise,
     range,
@@ -38,7 +38,7 @@ const getData = ({
   type,
   noise = 1,
   n_samples = 200,
-  ranges,
+  range,
 }) => {
   const dots = [];
   if (!type) {
@@ -46,7 +46,7 @@ const getData = ({
   }
 
   for (let i = 0; i < n_samples; i++) {
-    dots.push(getDotType[type](noise, (ranges || {})[type]));
+    dots.push(getDotType[type](noise, range));
   }
   return dots;
 };
