@@ -1,18 +1,21 @@
 const makeSineFn = (phase = 0, A = 1, freq = Math.PI * 3 / 2) => x => A * Math.sin((freq * x) + phase);
 
-const getRandom = noise => (Math.random() * noise) - (noise / 2);
+const getRandom = max => (Math.random() * max);
 
-const getRandomX = (min, max) => min + (Math.random() * (max - min));
+const getRandomPosition = (min, max) => min + (Math.random() * (max - min));
 
 const getDot = ({
   fn,
   noise,
   range,
 }) => {
-  const x = getRandomX(range[0], range[1]);
+  const x = getRandomPosition(range[0], range[1]);
+  const radius = getRandom(noise);
+  const theta = getRandom(Math.PI * 2);
+
   return {
-    x: x + getRandom(noise),
-    y: fn(x) + getRandom(noise),
+    x: x + (Math.sin(theta) * radius),
+    y: fn(x) + (Math.cos(theta) * radius),
   };
 }
 
