@@ -5,6 +5,18 @@ A small function to generate data similar to [sklearn's `make_moons`](http://sci
 
 Behind the scenes its generating a sine wave and randomly sampling points between a given range of that sine wave.
 
+## Installation
+
+```
+yarn add make_moons
+```
+
+or use npm:
+
+```
+npm install make_moons
+```
+
 ## Quick Start
 
 ```
