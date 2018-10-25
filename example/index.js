@@ -1,8 +1,8 @@
 /* globals Chart */
 import make_moons from '../src/index';
 const color = Chart.helpers.color;
-const NOISE = 0.1;
-const SAMPLES = 200;
+const NOISE = 0.08;
+const SAMPLES = 400;
 const data = {
   datasets: [
     {
@@ -23,4 +23,9 @@ const data = {
 const ctx = document.getElementById('chart').getContext('2d');
 Chart.Scatter(ctx, {
   data,
+  options: {
+    legend: {
+      display: false,
+    },
+  },
 });

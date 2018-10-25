@@ -1,6 +1,8 @@
-const makeSineFn = (phase = 0, A = 1, freq = Math.PI * 3 / 2) => x => A * Math.sin((freq * x) + phase);
+const A = 7;
 
-const getRandom = max => (Math.random() * max);
+const parabola = ({ a, h, k, x }) => (a * Math.pow((x - h), 2)) + k;
+
+const getRandom = max => (Math.random() * max) - (max / 2);
 
 const getRandomPosition = (min, max) => min + (Math.random() * (max - min));
 
@@ -19,23 +21,20 @@ const getDot = ({
   };
 }
 
-const fns = {
-  pos: makeSineFn(0),
-  neg: makeSineFn(Math.PI / 2),
-}
-
 const getDotType = {
   pos: (noise, range = [0, 2 / 3]) => getDot({
-    fn: fns.pos,
+    fn: x => parabola({ a: -1 * A, h: 1 / 3, k: 1, x}),
     noise,
     range,
   }),
   neg: (noise, range = [1 / 3, 1]) => getDot({
-    fn: fns.neg,
+    fn: x => parabola({ a: A, h: 2 / 3, k: 0, x}),
     noise,
     range,
   }),
 }
+
+const getRandomType = () => Math.random() > 0.5 ? 'pos' : 'neg';
 
 const getData = ({
   type,
@@ -45,7 +44,7 @@ const getData = ({
 }) => {
   const dots = [];
   if (!type) {
-    type = Math.random() > 0.5 ? 'pos' : 'neg';
+    type = getRandomType();
   }
 
   for (let i = 0; i < n_samples; i++) {
