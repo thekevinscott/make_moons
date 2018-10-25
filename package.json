@@ -4,11 +4,13 @@
   "description": "A quick function to generate moons data, similar to sklearn's make_moons, for a presentation on Tensorflow.js and machine learning in Javascript at LibertyJS.",
   "main": "index.js",
   "scripts": {
+    "develop": "parcel example/index.html --out-dir build",
     "build": "rollup -c"
   },
   "author": "Kevin Scott",
   "license": "MIT",
   "devDependencies": {
+    "parcel": "^1.10.3",
     "rollup": "^0.66.6"
   }
 }

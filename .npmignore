@@ -3,3 +3,6 @@ yarn.lock
 src
 rollup.config.js
 yarn-error.log
+.cache
+example
+build
