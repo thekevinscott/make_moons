@@ -1,7 +1,7 @@
 /* globals Chart */
 import make_moons from '../src/index';
 const color = Chart.helpers.color;
-const NOISE = 0.08;
+const NOISE = 0.18;
 const SAMPLES = 400;
 const data = {
   datasets: [

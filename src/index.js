@@ -1,4 +1,5 @@
-const A = 7;
+const K = 2;
+const A = 7 * K;
 
 const parabola = ({ a, h, k, x }) => (a * Math.pow((x - h), 2)) + k;
 
@@ -23,12 +24,12 @@ const getDot = ({
 
 const getDotType = {
   pos: (noise, range = [0, 2 / 3]) => getDot({
-    fn: x => parabola({ a: -1 * A, h: 1 / 3, k: 1, x}),
+    fn: x => parabola({ a: -1 * A, h: 1 / 3, k: K - 1, x}),
     noise,
     range,
   }),
   neg: (noise, range = [1 / 3, 1]) => getDot({
-    fn: x => parabola({ a: A, h: 2 / 3, k: 0, x}),
+    fn: x => parabola({ a: A, h: 2 / 3, k: -1, x}),
     noise,
     range,
   }),
