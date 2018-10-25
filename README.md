@@ -5,7 +5,7 @@ A small function to generate data similar to [sklearn's `make_moons`](http://sci
 
 Behind the scenes its generating a sine wave and randomly sampling points between a given range of that sine wave.
 
-<img src="https://raw.githubusercontent.com/thekevinscott/make_moons/master/make_moons.png" alt="A screenshot of make_moons in action" />
+<a href="https://thekevinscott.github.io/make_moons/"><img src="https://raw.githubusercontent.com/thekevinscott/make_moons/master/make_moons.png" alt="A screenshot of make_moons in action" /></a>
 
 ## Installation
 
