@@ -1,16 +1,20 @@
 {
   "name": "make_moons",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "A quick function to generate moons data, similar to sklearn's make_moons, for a presentation on Tensorflow.js and machine learning in Javascript at LibertyJS.",
   "main": "index.js",
   "scripts": {
     "develop": "parcel example/index.html --out-dir build",
+    "build:example": "parcel build example/index.html --public-url ./make_moons --out-dir docs",
+    "deploy": "npm run build:example && gh-pages -d docs && rimraf docs",
     "build": "rollup -c"
   },
   "author": "Kevin Scott",
   "license": "MIT",
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "parcel": "^1.10.3",
+    "rimraf": "^2.6.2",
     "rollup": "^0.66.6"
   }
 }
