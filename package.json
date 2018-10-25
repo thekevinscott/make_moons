@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "develop": "parcel example/index.html --out-dir build",
-    "build:example": "parcel build example/index.html --public-url ./make_moons --out-dir docs",
+    "build:example": "parcel build example/index.html --public-url ./ --out-dir docs",
     "deploy": "npm run build:example && gh-pages -d docs && rimraf docs",
     "build": "rollup -c"
   },
