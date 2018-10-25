@@ -1,6 +1,6 @@
 {
   "name": "make_moons",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A quick function to generate moons data, similar to sklearn's make_moons, for a presentation on Tensorflow.js and machine learning in Javascript at LibertyJS.",
   "main": "index.js",
   "scripts": {
