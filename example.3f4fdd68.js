@@ -3,4 +3,4 @@ parcelRequire=function(e,r,n,t){var i="function"==typeof parcelRequire&&parcelRe
 },{}],"Focm":[function(require,module,exports) {
 "use strict";var e=r(require("../src/index"));function r(e){return e&&e.__esModule?e:{default:e}}var a=Chart.helpers.color,t=.08,l=400,o={datasets:[{label:"Red",borderColor:"red",backgroundColor:a("red").alpha(.2).rgbString(),data:(0,e.default)({type:"pos",n_samples:l,noise:t})},{label:"Blue",borderColor:"blue",backgroundColor:a("blue").alpha(.2).rgbString(),data:(0,e.default)({type:"neg",n_samples:l,noise:t})}]},d=document.getElementById("chart").getContext("2d");Chart.Scatter(d,{data:o,options:{legend:{display:!1}}});
 },{"../src/index":"2u/B"}]},{},["Focm"], null)
-//# sourceMappingURL=make_moons/example.3f4fdd68.map
+//# sourceMappingURL=example.3f4fdd68.map
